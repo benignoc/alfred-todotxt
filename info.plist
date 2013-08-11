@@ -32,11 +32,11 @@
 	<key>createdby</key>
 	<string>Benigno Calvo Adiego</string>
 	<key>description</key>
-	<string>Wrapper for todo.txt</string>
+	<string>Wrapper for todo.txt -&gt; todotxt.com</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Todo2.txt</string>
+	<string>todotxt</string>
 	<key>objects</key>
 	<array>
 		<dict>
