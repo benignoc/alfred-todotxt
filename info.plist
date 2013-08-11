@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.benignocalvo.todotxt</string>
+	<key>connections</key>
+	<dict>
+		<key>55DCD6F2-96C3-451B-A8EE-AE7B3E00BD4F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>70C9D3A7-22B3-4742-81F6-91B3B2F1BE24</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>560A5EA9-184C-42F1-B4C8-949EA5C61EFB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>55DCD6F2-96C3-451B-A8EE-AE7B3E00BD4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Benigno Calvo Adiego</string>
+	<key>description</key>
+	<string>Wrapper for todo.txt</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Todo2.txt</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string># Usage:
+# todo [-fhpantvV] [-d todo_config] action [task_nr] [task_desc]
+# Try 'todo -h' for more information.
+
+TODOTXT_PATH='/usr/local/bin'
+
+$TODOTXT_PATH/todo.sh {query} |
+while IFS= read -r line; do
+  echo "$line"
+done</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>55DCD6F2-96C3-451B-A8EE-AE7B3E00BD4F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>runningsubtext</key>
+				<string>Searching Todos</string>
+				<key>script</key>
+				<string># Modify Path to your todo.txt file.
+
+python todo.py /Users/bcalvo/Dropbox/TODO/todo.txt {query} 2&gt;&amp;1 | tee todo.log</string>
+				<key>subtext</key>
+				<string>Wrapper for todo.txt</string>
+				<key>title</key>
+				<string>Todo.txt</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>560A5EA9-184C-42F1-B4C8-949EA5C61EFB</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Todo Action</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>70C9D3A7-22B3-4742-81F6-91B3B2F1BE24</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>55DCD6F2-96C3-451B-A8EE-AE7B3E00BD4F</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>560A5EA9-184C-42F1-B4C8-949EA5C61EFB</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>70C9D3A7-22B3-4742-81F6-91B3B2F1BE24</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>www.benignocalvo.com</string>
+</dict>
+</plist>
