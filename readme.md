@@ -10,13 +10,13 @@ Supports all standard arguments/extentions. If any is missing, please let me kno
 
 - [AlfredApp](http://www.alfredapp.com) + Powerpack
 - [phyllisstein/alp](https://github.com/phyllisstein/alp) Already included in the workflow for ease of use.
-- [Todo.txt](http://www.todotxt.com)
-- [Growl](http://www.growl.info)
+- [Todo.txt](http://www.todotxt.com)s
 
 ## Setup
 
-Download the [Todo.txt.alfredworkflow](https://github.com/madc/alfred-todotxt/raw/master/Todo.txt.alfredworkflow) from above and import it into Alfred. The workflow should work with Todo.txt right away, if installed via [MacPorts](https://trac.macports.org/browser/trunk/dports/office/todotxt/Portfile). Otherwise, TODOTXT_PATH has to be alterd to match the path, where todotxt is located.
-See the _Alfred-v1.x_ tag for the Alfred 1.x extention.
+Download the [todotxt.alfredworkflow](https://github.com/benignoc/alfred-todotxt/raw/master/todotxt.alfredworkflow)) from above and import it into Alfred.
+
+For the workflow to work, you need to check a couple of paths, first, the location of your **todo.txt** which you should do in the _t_ script filter block, and then the **todo.sh** bin path, which normally sits at '/usr/local/bin', but that you might need to change to fit your configuration, in which case, just alter TODOTXT_PATH to match the path, where todotxt is located.
 
 ## Sources & Thanks
 
