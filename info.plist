@@ -27,6 +27,25 @@
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6C298B64-3434-4EEF-B788-EE23FABB08D2</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>DELETE ToDo</string>
+			</dict>
+		</array>
+		<key>6C298B64-3434-4EEF-B788-EE23FABB08D2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>70C9D3A7-22B3-4742-81F6-91B3B2F1BE24</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -121,6 +140,29 @@ python todo.py /Users/bcalvo/Dropbox/TODO/todo.txt {query} 2&gt;&amp;1 | tee tod
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># Usage:
+# todo [-fhpantvV] [-d todo_config] action [task_nr] [task_desc]
+# Try 'todo -h' for more information.
+
+TODOTXT_PATH='/usr/local/bin'
+NUMBER=$(echo "{query}" | sed 's/do //g')
+$TODOTXT_PATH/todo.sh -f del $NUMBER</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6C298B64-3434-4EEF-B788-EE23FABB08D2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -135,6 +177,11 @@ python todo.py /Users/bcalvo/Dropbox/TODO/todo.txt {query} 2&gt;&amp;1 | tee tod
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
+		</dict>
+		<key>6C298B64-3434-4EEF-B788-EE23FABB08D2</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
 		</dict>
 		<key>70C9D3A7-22B3-4742-81F6-91B3B2F1BE24</key>
 		<dict>
