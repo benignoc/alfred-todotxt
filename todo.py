@@ -33,10 +33,17 @@ def main():
 
     if len(q)==1:
         if len(todos):
+            tmpfeedback = []
             for r in todos:
-                feedback.append(I(title=format(todos.index(r)+1)+':'+r, subtitle="Mark as Done", arg=u"do {0}".format(todos.index(r)+1), valid=True))
+                if r[0] == '(' and r[2] == ')' and r[1]:
+                    pri = r[1].upper()
+                else:
+                    pri = 'z'
+                tmpfeedback.append((pri,I(title=format(todos.index(r)+1)+':'+r, subtitle="Mark as Done", arg=u"do {0}".format(todos.index(r)+1), valid=True)))
         else:
-            feedback.append(addItem)
+            tmpfeedback.append(addItem)
+        tmpfeedback.sort(key=lambda reg: reg[0])
+        feedback = [tmpfeedback[i][1] for i in range(len(tmpfeedback))]
     elif len(q)==2:
         if q[1] in ['archive','deduplicate']:
             # Leave other specific actions unaltered by the program.
