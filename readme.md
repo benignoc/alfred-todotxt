@@ -22,5 +22,10 @@ For the workflow to work, you need to check a couple of paths, first, the locati
 
 ## Sources & Thanks
 
+- Adapted a fork from [narango](https://github.com/narango) my thanks to him for giving shape to this cool feature of Sorting by Priority.
 - The icon is taken from the Todo.txt-website. It has been created by [John Rowley](https://twitter.com/eJohnR)
 - The .gitignore was generated with [.gitignore.oi](http://gitignore.io)
+
+## History
+
+- 22/09/2013 Added functionality out of branch from Narango, and fixed a bug that led to errors when using foreign characters on the todo file (spanish accents etc). Now it all works nicely.
